@@ -21,8 +21,6 @@ mybatis:
 spring:
   cloud:
     config: false
-  application:
-    name: microservicecloud-dept
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
 #    前数据源操作类型
@@ -69,8 +67,6 @@ mybatis:
 spring:
   cloud:
     config: false
-  application:
-    name: microservicecloud-dept
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
 #    前数据源操作类型
