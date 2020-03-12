@@ -15,7 +15,7 @@ mybatis:
 
   config-location: classpath:mybatis/mybatis.cfg.xml
 #  mybatis映射文件
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
 #  实体类所在包
   type-aliases-package: com.goldencis.springcloud.entity
 spring:
@@ -61,7 +61,7 @@ mybatis:
 
   config-location: classpath:mybatis/mybatis.cfg.xml
 #  mybatis映射文件
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
 #  实体类所在包
   type-aliases-package: com.goldencis.springcloud.entity
 spring:
