@@ -3,24 +3,13 @@ spring:
     active:
     -dev
 ---
+server:
+  port: 8001
+
 spring:
    profiles: dev
    application:
      name: microservicecloud-config-dept-client
-
-server:
-  port: 8001
-
-mybatis:
-
-  config-location: classpath:mybatis/mybatis.cfg.xml
-#  mybatis映射文件
-  mapper-locations: classpath:mybatis/mapper/*.xml
-#  实体类所在包
-  type-aliases-package: com.goldencis.springcloud.entity
-spring:
-  cloud:
-    config: false
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
 #    前数据源操作类型
@@ -35,6 +24,16 @@ spring:
       initial-size: 5
 #      等待连接获取的最大超时时间
       max-wait-millis: 200
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+#  mybatis映射文件
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  实体类所在包
+  type-aliases-package: com.goldencis.springcloud.entity
+
+
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -49,24 +48,13 @@ info:
   build.artifactId: "@project.artifactId@"
   build.version: "@project.version@"
 ---
-spring:
-   profiles: test
-   application:
-    name: microservicecloud-config-dept-client
-
 server:
   port: 8001
 
-mybatis:
-
-  config-location: classpath:mybatis/mybatis.cfg.xml
-#  mybatis映射文件
-  mapper-locations: classpath:mybatis/mapper/*.xml
-#  实体类所在包
-  type-aliases-package: com.goldencis.springcloud.entity
 spring:
-  cloud:
-    config: false
+   profiles: test
+   application:
+     name: microservicecloud-config-dept-client
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
 #    前数据源操作类型
@@ -81,6 +69,16 @@ spring:
       initial-size: 5
 #      等待连接获取的最大超时时间
       max-wait-millis: 200
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+#  mybatis映射文件
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  实体类所在包
+  type-aliases-package: com.goldencis.springcloud.entity
+
+
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
